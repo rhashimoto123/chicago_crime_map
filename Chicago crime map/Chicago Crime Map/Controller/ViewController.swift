@@ -18,7 +18,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     
-    //let locationManager = CLLocationManager()
     var locationManager:CLLocationManager!
     
     // Create DataManager Object
@@ -56,10 +55,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
         
         // Settings for Location Manager
+        //locationManager = CLLocationManager()
         //locationManager.delegate = self
         //locationManager.desiredAccuracy = kCLLocationAccuracyBest
         //locationManager.requestWhenInUseAuthorization()
         //locationManager.requestLocation()
+        //if CLLocationManager.locationServicesEnabled() {
+        //    locationManager!.startUpdatingLocation()
+        //}
         
         // Set user's initial place
         let coordinate = CLLocationCoordinate2D(latitude: 41.78604, longitude: -87.59395)
@@ -139,7 +142,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Show each point in the map
         mapView.addAnnotations(crimeArray)
         mapView.selectedAnnotations = crimeArray
-        //mapView.register(PlaceMarkerView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
             }
     
     // Attribution: https://medium.com/@kiransjadhav111/corelocation-map-kit-get-the-users-current-location-set-a-pin-in-swift-edb12f9166b2
@@ -171,7 +173,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.requestAlwaysAuthorization()
 
             if CLLocationManager.locationServicesEnabled() {
-                locationManager.startUpdatingLocation()
+                //locationManager.startUpdatingLocation()
             }
         }
     
@@ -352,13 +354,6 @@ extension ViewController: HandleMapSearch {
         annotation.coordinate = placemark.coordinate
         annotation.title = placemark.name
         
-        //let pinView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: nil)
-        //pinView.canShowCallout = false
-        
-        //if let city = placemark.locality,
-        //let state = placemark.administrativeArea {
-        //    annotation.subtitle = "(city) (state)"
-        //}
         mapView.addAnnotation(annotation)
         
         let span = MKCoordinateSpan.init(latitudeDelta: 0.005, longitudeDelta: 0.005)

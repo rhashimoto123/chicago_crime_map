@@ -42,7 +42,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
         let initialDate = UserDefaults.standard.object(forKey: "Initial Launch") as! Date
-        if initialDate != nil {
+        if initialDate == nil {
             print("DEBUG ----> Showing an Instruction")
             if launchFromTerminated {
               showSplashScreen(autoDismiss: false, label: "Splash")

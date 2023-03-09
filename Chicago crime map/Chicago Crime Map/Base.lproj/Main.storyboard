@@ -29,19 +29,24 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chicago_crime_map" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chicago_Crime_Map" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tzE-I9-63o">
-                                <rect key="frame" x="0.0" y="49" width="393" height="803"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tzE-I9-63o">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="tzE-I9-63o" secondAttribute="bottom" id="5mk-AD-wbd"/>
+                            <constraint firstItem="tzE-I9-63o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SiW-SM-lws"/>
+                            <constraint firstItem="tzE-I9-63o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-91" id="WFv-q4-SJW"/>
+                            <constraint firstAttribute="trailing" secondItem="tzE-I9-63o" secondAttribute="trailing" id="jGD-XU-oSe"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ROe-YA-gMz">
                         <barButtonItem key="rightBarButtonItem" title="Filters" id="kKy-GE-A1i">
@@ -58,12 +63,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="41.984732824427482" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="41.53846153846154" y="2.8436018957345972"/>
         </scene>
         <!--Location Search Table-->
         <scene sceneID="PoD-MO-WLR">
             <objects>
-                <tableViewController storyboardIdentifier="LocationSearchTable" id="NJu-12-EgF" customClass="LocationSearchTable" customModule="Chicago_crime_map" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LocationSearchTable" id="NJu-12-EgF" customClass="LocationSearchTable" customModule="Chicago_Crime_Map" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="cao-ty-VY0">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +112,7 @@
         <!--Filters View Controller-->
         <scene sceneID="2wW-uY-p4u">
             <objects>
-                <viewController storyboardIdentifier="filtersVC" id="gNz-VC-bcl" customClass="FiltersViewController" customModule="Chicago_crime_map" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="filtersVC" id="gNz-VC-bcl" customClass="FiltersViewController" customModule="Chicago_Crime_Map" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bMI-wk-u2h">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,7 +219,7 @@
         <!--Detail View Controller-->
         <scene sceneID="Q22-sK-mm7">
             <objects>
-                <viewController storyboardIdentifier="locationDetail" id="vuf-zf-gO8" customClass="DetailViewController" customModule="Chicago_crime_map" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="locationDetail" id="vuf-zf-gO8" customClass="DetailViewController" customModule="Chicago_Crime_Map" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZiM-Ji-d7R">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
